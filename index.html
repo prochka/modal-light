@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Modal light new</title>
+	<link rel="stylesheet" href="css/style.css" type="text/css"/>
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+	<script src="js/jquery-3.2.0.min.js" type="text/javascript"></script>
+	<script src="js/jquery.leanModal.min.js" type="text/javascript"></script>
+	<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+	<h1>Hello, world!</h1>	
+	<div id="basic-modal" class="modal">
+		<h3>Это модальное окно</h3>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam, nihil!</p>
+		<button type="button" class="btn btn-primary">Закрыть</button>
+	</div>
+	<a class="btn btn-success open-modal" rel="leanModal" href="#basic-modal">Открыть окно</a>
+
+	<script>
+		$(function() {
+			$('a[rel*=leanModal]').leanModal();
+			$('button').click(function(){
+				$('#basic-modal').css('display','none');
+				$('#lean_overlay ').fadeTo(700, 0);
+			})
+		});
+	</script>
+</body>	
+</html>
